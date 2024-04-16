@@ -26,6 +26,9 @@ img {
 a {
   display: block;
 }
+button {
+  cursor: pointer; /*курсор при наведенні палець*/
+}
 .container {
   max-width: 1158px;
   margin: 0 auto;
@@ -45,7 +48,7 @@ a {
   overflow: hidden;
 }
 
-/* header */
+/* =============header============= */
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -129,7 +132,7 @@ a {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору(властив_тривал_функц.часу_затримка)*/
 }
 
-/* section-one */
+/* =============section-one============= */
 .section-one {
   background-color: #2e2f42;
   padding: 188px 0;
@@ -165,15 +168,12 @@ a {
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
-  border: #4d5ae5;
-  cursor: pointer; /*курсор при наведенні палець*/
-  margin-top: 48px;
+  border: none;
   display: block;
   border-radius: 4px;
   min-width: 169px;
   height: 56px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
 }
 .button:hover,
@@ -181,7 +181,7 @@ a {
   background-color: #404bbf;
 }
 
-/* section-two */
+/* =============section-two============= */
 .section {
   padding: 120px 0;
 }
@@ -220,7 +220,7 @@ a {
   margin-bottom: 8px;
 }
 
-/* section-three */
+/* =============section-three============= */
 .section.back {
   background-color: #f4f4fd;
   max-width: 1440px;
@@ -278,7 +278,7 @@ a {
   fill: #f4f4fd; /*колір фону іконки*/
 }
 
-/*section-four*/
+/* =============section-four============= */
 .section-title {
   font-size: 36px;
   line-height: 1.11;
@@ -336,7 +336,7 @@ a {
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
-/* footer */
+/* =============footer============= */
 .page-footer {
   background-color: #2e2f42;
   padding: 100px 0;
@@ -361,7 +361,7 @@ a {
   margin-bottom: 16px;
 }
 .social-list.foot {
-  display: flex; /*елементи по горизонталі*/
+  display: flex;
   justify-content: flex-start;
   gap: 16px;
 }
@@ -371,9 +371,9 @@ a {
 .social-list.foot .link:hover {
   background-color: #31d0aa;
 }
-.page-footer .container {
-  display: flex; /*елементи по горизонталі*/
-  align-items: baseline; /*елементи розташовані на початку контейнера*/
+.container.foot {
+  display: flex; /*елементи розташовані горигонтально*/
+  align-items: baseline; /*елементи розташовані на базовій лінії контейнера*/
 }
 .device-foot {
   margin-right: 120px;
