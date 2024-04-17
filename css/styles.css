@@ -28,6 +28,11 @@ a {
 }
 button {
   cursor: pointer; /*курсор при наведенні палець*/
+  border: none; /*прибирання стандартної рамки*/
+}
+button:hover,
+button:focus {
+  background-color: #404bbf;
 }
 .container {
   max-width: 1158px;
@@ -168,17 +173,12 @@ button {
   letter-spacing: 0.04em;
   color: #ffffff;
   background-color: #4d5ae5;
-  border: none;
   display: block;
   border-radius: 4px;
   min-width: 169px;
   height: 56px;
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
-}
-.button:hover,
-.button:focus {
-  background-color: #404bbf;
 }
 
 /* =============section-two============= */
@@ -380,4 +380,52 @@ button {
 }
 .social-list.foot .link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-container {
+  margin-right: 80px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+.subscribe-text {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.subscribe-input {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: transparent;
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+.subscribe-button {
+  display: flex; /*робимо з button flex контейнер*/
+  align-items: center; /*вирівнює елем. в перпендикулярному (горизонтальному)*/
+  justify-content: center; /*вирівнює елем. в горизонтальному напрямку*/
+  flex-direction: row; /*розміщення зліва направо*/
+  gap: 16px;
+  border-radius: 4px;
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff;
+  background: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
 }
