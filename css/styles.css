@@ -7,8 +7,9 @@ a:link {
   text-decoration: none; /*прибирання підкреслювання для посилань*/
 }
 ul {
-  list-style-type: none; /*прибирання маркерів елементів списку*/
-  margin: 0;
+  list-style: none; /*прибирання маркерів елементів списку*/
+  margin-top: 0;
+  margin-bottom: 0;
   padding-left: 0;
 }
 
@@ -16,7 +17,8 @@ h1,
 h2,
 h3,
 p {
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 img {
@@ -29,6 +31,18 @@ a {
 button {
   cursor: pointer; /*курсор при наведенні палець*/
   border: none; /*прибирання стандартної рамки*/
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
+  text-align: center;
 }
 button:hover,
 button:focus {
@@ -67,6 +81,10 @@ button:focus {
 .logo .logo-black {
   color: #2e2f42;
 }
+.navi {
+  display: flex;
+  align-items: center;
+}
 .menu-link {
   font-weight: 500;
   font-size: 16px;
@@ -79,12 +97,19 @@ button:focus {
 .menu-link:focus {
   color: #404bbf;
 }
-
+.menu {
+  display: flex;
+  gap: 40px;
+}
+.menu-link {
+  position: relative; /*відносне позиціювання*/
+}
 .contacts {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   font-style: normal;
+  margin-left: auto;
 }
 .contacts-link {
   color: #434455;
@@ -96,31 +121,19 @@ button:focus {
 }
 .page-header .container {
   display: flex;
+  align-items: center;
 }
 .page-header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
     0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
-  max-width: 1440px;
-  margin: 0 auto;
 }
-.navi {
-  display: flex;
-  align-items: center;
-}
-.menu {
+
+.contacts-list {
   display: flex;
   gap: 40px;
-  margin-right: 332px;
 }
-.contacts-menu {
-  display: flex;
-  gap: 40px;
-  padding: 24px 0;
-}
-.menu-link {
-  position: relative; /*відносне позиціювання*/
-}
+
 /* додатковий клас для стилізації через псевдоелемент */
 .studio::after {
   content: "";
@@ -152,7 +165,8 @@ button:focus {
   background-position: center; /* початкова позицію (зміщення) фонового зображення*/
   background-size: cover; /*розмір зображення:зображення заповн.весь контейнер*/
   max-width: 1440px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .titel-section-one {
@@ -164,21 +178,13 @@ button:focus {
   max-width: 496px;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 48px;
 }
 .button {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #4d5ae5;
-  display: block;
-  border-radius: 4px;
   min-width: 169px;
   height: 56px;
-  margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =============section-two============= */
@@ -223,7 +229,6 @@ button:focus {
 /* =============section-three============= */
 .section.back {
   background-color: #f4f4fd;
-  max-width: 1440px;
   margin: 0 auto;
 }
 .team-member {
@@ -302,7 +307,7 @@ button:focus {
 }
 .portfolio-item {
   width: 360px;
-  overflow: hidden;
+  overflow: hidden; /*для приховання контенту, який виходить за межі елемента*/
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -329,7 +334,7 @@ button:focus {
 .portfolio-item:hover .overlay-text {
   transform: translateY(
     0%
-  ); /*Ховер "portfolio-image",повертає "overlay-text" у вихідне положення*/
+  ); /*при ховері "portfolio-image",повертає "overlay-text" у вихідне положення*/
 }
 .portfolio-item:hover {
   box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -340,7 +345,6 @@ button:focus {
 .page-footer {
   background-color: #2e2f42;
   padding: 100px 0;
-  max-width: 1440px;
   margin: 0 auto;
 }
 .logo .logo-white {
@@ -354,7 +358,7 @@ button:focus {
   margin-bottom: 16px;
 }
 .social-text-foot {
-  color: #fff;
+  color: #ffffff;
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -410,22 +414,177 @@ button:focus {
   letter-spacing: 0.04em;
   color: #ffffff;
 }
+/*.subscribe-input::placeholder {
+  color: #ffffff; /*колір тексту placeholder
+}*/
 .subscribe-button {
   display: flex; /*робимо з button flex контейнер*/
   align-items: center; /*вирівнює елем. в перпендикулярному (горизонтальному)*/
   justify-content: center; /*вирівнює елем. в горизонтальному напрямку*/
   flex-direction: row; /*розміщення зліва направо*/
   gap: 16px;
-  border-radius: 4px;
   padding: 8px 24px;
   min-width: 165px;
   height: 40px;
+}
+/* =============modal============= */
+.modal-overlay {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+  border-radius: 4px;
+  max-width: 408px;
+  height: 584px;
+  padding: 74px 24px 24px 24px;
+  overflow-y: auto;
+  position: absolute;
+}
+.modal-btn-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  border: none;
+  fill: #ffffff;
+}
+.modal-text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-align: center;
-  color: #ffffff;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.form-strip {
+  margin-bottom: 8px;
+}
+.form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block;
+  margin-bottom: 4px;
+}
+.form-item {
+  position: relative;
+}
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 38px;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus {
+  border-color: #4d5ae5;
+}
+
+.form-icon {
+  position: absolute; /*абсолютне позиціювання відносно батьківського елемента*/
+  left: 16px; /*відступ від лівого краю батьківського елемента*/
+  top: 50%; /*сзміщення від верхнего краю контейнера на 50%*/
+  transform: translateY(
+    -50%
+  ); /*зміщення елемента вгору і відцентрує всередині предка*/
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + .form-icon {
+  fill: #4d5ae5;
+}
+.modal-textarea {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%;
+  height: 120px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  padding: 8px 16px;
+  background-color: transparent;
+  outline: transparent;
+  resize: none; /*заборона зміни розміру вікна textarea*/
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-textarea:focus {
+  border-color: #4d5ae5;
+}
+.form-checkbox {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+.check-label {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+a.link-privacy-policy {
+  font-size: 12px;
+  line-height: 1.33333;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+  margin-left: 2px;
+}
+.check-mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+  margin-right: 8px;
+}
+.check-input:checked + .check-icon {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+.btn-modal {
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
+  margin-left: auto;
+  margin-right: auto;
 }
