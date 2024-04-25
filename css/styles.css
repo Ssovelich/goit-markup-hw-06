@@ -568,7 +568,6 @@ button:focus {
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
-
 .check-mark {
   width: 16px;
   height: 16px;
@@ -590,12 +589,12 @@ button:focus {
   fill: #f4f4fd; /*зазначення кольору іконки*/
 }
 a.link-privacy-policy {
+  display: inline;
   font-size: 12px;
   line-height: 1.33;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #4d5ae5;
-  margin-left: 2px;
 }
 .btn-modal {
   border-radius: 4px;
