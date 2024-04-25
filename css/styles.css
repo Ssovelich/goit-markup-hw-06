@@ -581,6 +581,7 @@ button:focus {
   justify-content: center; /*вирівнювання іконки по горизонталі*/
   fill: transparent; /*задання кольору іконки - прозорий*/
   margin-right: 8px;
+  cursor: pointer;
 }
 .check-input:checked + .check-label .check-mark {
   /*input у стані checked, для тега span задано стилі*/
