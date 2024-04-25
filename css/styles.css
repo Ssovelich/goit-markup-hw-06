@@ -583,7 +583,7 @@ button:focus {
   fill: transparent; /*задання кольору іконки - прозорий*/
   margin-right: 8px;
 }
-.check-input:checked + .check-mark {
+.check-input:checked + .check-label .check-mark {
   /*input у стані checked, для тега span задано стилі*/
   background-color: #404bbf;
   border: none; /*вимкнення стандартного оформлення кнопки*/
