@@ -419,9 +419,9 @@ button:focus {
   letter-spacing: 0.04em;
   color: #ffffff;
 }
-/*.subscribe-input::placeholder {
-  color: #ffffff; /*колір тексту placeholder
-}*/
+.subscribe-input::placeholder {
+  color: #ffffff; /*колір тексту placeholder*/
+}
 .subscribe-button {
   display: flex; /*робимо з button flex контейнер*/
   align-items: center; /*вирівнює елем. в перпендикулярному (горизонтальному)*/
