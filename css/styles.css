@@ -449,10 +449,12 @@ button:focus {
 
   opacity: 0; /*modal-overley повністю прозорий*/
   pointer-events: none; /*overley та modal-вікно ігнорують дії миші*/
+  visibility: hidden;
 }
 .modal-overlay.is-open {
   /*додатковий клас для відображення модального вікна з оверлеєм*/
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
 }
 .modal {
@@ -529,11 +531,11 @@ button:focus {
   border-radius: 4px;
   padding-left: 38px;
   background-color: transparent; /*колір фону елемента - прозорий*/
-  outline: transparent; /*стиль контуру для елемента - прозорий*/
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміни кольору рамки*/
 }
 .modal-input:focus {
   border-color: #4d5ae5;
+  outline: transparent; /*стиль контуру для елемента - прозорий*/
 }
 
 .form-icon {
@@ -546,7 +548,7 @@ button:focus {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-input:focus + .form-icon {
-  fill: #4d5ae5; /*зміна кольору іконки при кліку на input*/
+  fill: #4d5ae5; /*зміна кольору іконки при фокусі на input*/
 }
 .coment-margin {
   margin-bottom: 16px;
@@ -556,11 +558,7 @@ button:focus {
   border-radius: 4px;
   width: 100%; /*займає повну ширину його батьківського елемента*/
   height: 120px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
+
   padding: 8px 16px;
   background-color: transparent; /*колір фону елемента - прозорий*/
   outline: transparent; /*стиль контуру для елемента - прозорий*/
@@ -569,6 +567,12 @@ button:focus {
 }
 .modal-textarea:focus {
   border-color: #4d5ae5;
+}
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
 }
 .form-checkbox {
   margin-bottom: 24px;
@@ -601,6 +605,9 @@ button:focus {
   background-color: #404bbf;
   border: none; /*вимкнення стандартного оформлення кнопки*/
   fill: #f4f4fd; /*зазначення кольору іконки*/
+}
+.check-input:focus + .check-label .check-mark {
+  outline: 2px solid rgba(0, 0, 0, 1);
 }
 a.link-privacy-policy {
   display: inline; /*для для перенесення на один рядок з текстом*/
