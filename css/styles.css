@@ -418,6 +418,7 @@ button:focus {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #ffffff;
+  outline: transparent;
 }
 .subscribe-input::placeholder {
   color: #ffffff; /*колір тексту placeholder*/
@@ -532,6 +533,7 @@ button:focus {
   padding-left: 38px;
   background-color: transparent; /*колір фону елемента - прозорий*/
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміни кольору рамки*/
+  outline: transparent;
 }
 .modal-input:focus {
   border-color: #4d5ae5;
