@@ -1,0 +1,489 @@
+.container {
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+button {
+  cursor: pointer; /*курсор при наведенні палець*/
+  border: none; /*прибирання стандартної рамки*/
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  display: block; /*для можливості центрувати кнопку через властивість margin*/
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
+  text-align: center;
+}
+button:hover,
+button:focus {
+  background-color: #404bbf;
+}
+/*приховування непотрібного заголовка*/
+
+/* =============header============= */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* =============section-one============= */
+.hero {
+  background-color: #2e2f42;
+  padding: 188px 0;
+  border: 1px solid #000000; /*рамка 1рх суцільна*/
+  background-image: linear-gradient(
+      to bottom,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/office.jpg); /*затемнення зображення*/
+  background-repeat: no-repeat; /*фонове зобреження без повторень в елеиенті*/
+  background-position: center; /* початкова позицію (зміщення) фонового зображення*/
+  background-size: cover; /*розмір зображення:зображення заповн.весь контейнер*/
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titel-hero {
+  font-size: 56px; /*розмір шрифту*/
+  line-height: 1.07; /*висота рядка*/
+  letter-spacing: 0.02em; /*інтервал між символами*/
+  text-align: center; /*вирівнювання тексту*/
+  color: #ffffff;
+  max-width: 496px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 48px;
+}
+
+/* =============section-two============= */
+.section {
+  padding: 120px 0;
+}
+.item {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+.item-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
+.list-benefits {
+  display: flex;
+  gap: 24px;
+}
+.item-benefits {
+  width: calc((100% - 3 * 24px) / 4);
+}
+.icon-box {
+  display: flex;
+  justify-content: center; /*вирівнювання по горизонталі*/
+  align-items: center; /*вирівнювання по вертикалі*/
+  width: 264pxpx;
+  height: 112px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  width: 264px;
+  height: 112px;
+  background: #f4f4fd;
+  margin-bottom: 8px;
+}
+
+/* =============section-three============= */
+.section.back {
+  background-color: #f4f4fd;
+  margin: 0 auto;
+}
+
+.team-list .team-member {
+  width: calc((100 - 72) / 4);
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between; /*вирівнювання по горизонталі*/
+}
+.social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center; /*вирівнювання по горизонталі*/
+  margin-top: 16px;
+}
+.link {
+  display: flex;
+  justify-content: center; /*вирівнювання по горизонталі*/
+  align-items: center; /*вирівнювання по вертикалі*/
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
+}
+.social-list .link:hover,
+.social-list .link:focus {
+  background-color: #404bbf;
+}
+.icon {
+  fill: #f4f4fd; /*колір фону іконки*/
+}
+
+/* =============section-four============= */
+.section-title {
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  text-transform: capitalize;
+  margin-bottom: 72px;
+}
+.portfolio-item-info {
+  padding: 32px 16px;
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap; /*Гнучкі елементи шикуються в кілька рядків*/
+  row-gap: 48px; /*відступи між рядками*/
+  column-gap: 24px; /*відступи між стовпчиками*/
+}
+.portfolio-item {
+  width: 360px;
+  overflow: hidden; /*для приховання контенту, який виходить за межі елемента*/
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-image {
+  position: relative; /*відносне позиціювання*/
+  overflow: hidden; /*для приховання контенту, який виходить за межі елемента*/
+}
+
+.overlay-text {
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  color: #f4f4fd;
+  position: absolute; /*абсолютне позиціювання відносно "portfolio-image"*/
+  top: 0; /*для зміщення елемента до верхньої межі контейнера*/
+  left: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  height: 100%; /*100% висоти батьківського елемента(portfolio-image)*/
+  width: 100%; /*100% ширини батьківського елемента(portfolio-image)*/
+  transform: translateY(100%); /*зміщуємо вгору на 100% його висоти*/
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміщення елементу*/
+}
+.portfolio-item:hover .overlay-text {
+  transform: translateY(
+    0%
+  ); /*при ховері "portfolio-image",повертає "overlay-text" у вихідне положення*/
+}
+.portfolio-item:hover {
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+/* =============footer============= */
+.page-footer {
+  background-color: #2e2f42;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+.logo .logo-white {
+  color: #f4f4fd;
+}
+.footer-p {
+  color: #f4f4fd;
+  line-height: 1.5;
+}
+.logo.foot {
+  margin-bottom: 16px;
+}
+.social-text-foot {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.social-list.foot {
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+}
+.social-list.foot .link:focus {
+  background-color: #31d0aa;
+}
+.social-list.foot .link:hover {
+  background-color: #31d0aa;
+}
+.container.foot {
+  display: flex; /*елементи розташовані горигонтально*/
+  align-items: baseline; /*елементи розташовані на базовій лінії контейнера*/
+}
+.device-foot {
+  margin-right: 120px;
+}
+.social-list.foot .link {
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-container {
+  margin-right: 80px;
+}
+
+.subscribe-form {
+  display: flex;
+  gap: 24px;
+}
+.subscribe-text {
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.subscribe-input {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  width: 264px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: transparent;
+  padding: 8px 16px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  outline: transparent;
+}
+.subscribe-input::placeholder {
+  color: #ffffff; /*колір тексту placeholder*/
+}
+.subscribe-button {
+  display: flex; /*робимо з button flex контейнер*/
+  align-items: center; /*вирівнює елем. в перпендикулярному (горизонтальному)*/
+  justify-content: center; /*вирівнює елем. в горизонтальному напрямку*/
+  flex-direction: row; /*розміщення зліва направо*/
+  padding: 8px 24px;
+  min-width: 165px;
+  height: 40px;
+}
+.icon-subscribe-button {
+  margin-left: 16px;
+}
+
+/* =============modal============= */
+.modal-overlay {
+  background-color: rgba(46, 47, 66, 0.4);
+  position: fixed; /*фіксує елемент на сторінці, не дозволяє йому переміщуватися відносно його контейнера(body)*/
+  top: 0; /*зміщення елемента до верхньої межі контейнера(body)*/
+  left: 0; /*відстань між лівим краєм елемента і лівим краєм його батьківського елемента(body)*/
+  width: 100%; /*ширина 100% ширини батьківського контейнера*/
+  height: 100%; /*висота 100% висоти батьківського контейнера*/
+  z-index: 999; /*розміщення елемента на сторінці вище всіх інших*/
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /*для плавної зміни прозорості і видимості елемента*/
+
+  opacity: 0; /*modal-overley повністю прозорий*/
+  pointer-events: none; /*overley та modal-вікно ігнорують дії миші*/
+  visibility: hidden;
+}
+.modal-overlay.is-open {
+  /*додатковий клас для відображення модального вікна з оверлеєм*/
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+.modal {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 2px 1px 0 rgba(0, 0, 0, 0.2);
+  background: #fcfcfc;
+  border-radius: 4px;
+  width: 408px;
+  min-height: 584px;
+  top: 50%; /*центрування елемента по вертикалі*/
+  left: 50%; /*центрування елемента по горизонталі*/
+  transform: translate(
+    -50%,
+    -50%
+  ); /*центрування елемента по вертикалі та горизонталі на веб-сторінці*/
+  padding: 72px 24px 24px 24px;
+  overflow-y: auto;
+  position: absolute; /*позиція елемента відносно його батьківського елемента*/
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); /*анімаційний ефект зміни значень властивостей стилю*/
+}
+.modal-btn-close {
+  position: absolute; /*позиція елемента відносно його батьківського елемента*/
+  top: 24px; /*відстань від верхнього краю батьківського елементу до верхнього краю кнопки*/
+  right: 24px; /*відстані від правого краю батьківського елементу до правого краю кнопки*/
+  width: 24px; /*визначення ширини елемента*/
+  height: 24px; /*визначення висоти елемента*/
+  border-radius: 50%; /*радіус кутів елемента, буде коло*/
+  display: flex; /*можливость зміни розташування дочірнього елемента*/
+  align-items: center; /*вирівнювання дочірнього елемента по вертикалі*/
+  justify-content: center; /*вирівнювання дочірнього елемента по горизонталі*/
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1); /*анімаційний ефект для зміни значень властивостей стилю*/
+  padding: 0;
+}
+.icon-close {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміна кольору*/
+}
+
+.modal-btn-close:hover,
+.modal-btn-close:focus {
+  border: none;
+  fill: #ffffff;
+}
+.modal-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #2e2f42;
+  margin-bottom: 16px;
+}
+.form-strip {
+  margin-bottom: 8px;
+}
+.form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+  display: block; /*для реалізації відступів між елементами*/
+  margin-bottom: 4px;
+}
+.form-item {
+  position: relative; /*встановлення позиціонування елемента відносно його звичайного місця*/
+}
+.modal-input {
+  width: 100%; /*займає повну ширину його батьківського елемента*/
+  height: 40px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  padding-left: 38px;
+  background-color: transparent; /*колір фону елемента - прозорий*/
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /*плавна зміни кольору рамки*/
+  outline: transparent;
+}
+.modal-input:focus {
+  border-color: #4d5ae5;
+  outline: transparent; /*стиль контуру для елемента - прозорий*/
+}
+
+.form-icon {
+  position: absolute; /*абсолютне позиціювання відносно батьківського елемента*/
+  left: 16px; /*відступ від лівого краю батьківського елемента*/
+  top: 50%; /*зміщення від верхнего краю контейнера на 50%*/
+  transform: translateY(
+    -50%
+  ); /*зміщення елемента вгору і відцентрує всередині предка*/
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-input:focus + .form-icon {
+  fill: #4d5ae5; /*зміна кольору іконки при фокусі на input*/
+}
+.coment-margin {
+  margin-bottom: 16px;
+}
+.modal-textarea {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  width: 100%; /*займає повну ширину його батьківського елемента*/
+  height: 120px;
+
+  padding: 8px 16px;
+  background-color: transparent; /*колір фону елемента - прозорий*/
+  outline: transparent; /*стиль контуру для елемента - прозорий*/
+  resize: none; /*заборона зміни розміру вікна textarea*/
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-textarea:focus {
+  border-color: #4d5ae5;
+}
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.form-checkbox {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+}
+.check-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+.check-mark {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-flex;
+  align-items: center; /*вирівнювання іконки по вертикалі*/
+  justify-content: center; /*вирівнювання іконки по горизонталі*/
+  fill: transparent; /*задання кольору іконки - прозорий*/
+  margin-right: 8px;
+  cursor: pointer;
+}
+.check-input:checked + .check-label .check-mark {
+  /*input у стані checked, для тега span задано стилі*/
+  background-color: #404bbf;
+  border: none; /*вимкнення стандартного оформлення кнопки*/
+  fill: #f4f4fd; /*зазначення кольору іконки*/
+}
+.check-input:focus + .check-label .check-mark {
+  outline: 2px solid rgba(0, 0, 0, 1);
+}
+a.link-privacy-policy {
+  display: inline; /*для для перенесення на один рядок з текстом*/
+  font-size: 12px;
+  line-height: 1.33;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: #4d5ae5;
+}
+.btn-modal {
+  border-radius: 4px;
+  padding: 16px 32px;
+  min-width: 169px;
+  height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  background: #4d5ae5;
+  margin-left: auto;
+  margin-right: auto;
+}

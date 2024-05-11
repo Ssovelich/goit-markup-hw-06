@@ -26,7 +26,7 @@
   <body>
     <!-- ============= HEADER ============= -->
     <header class="page-header">
-      <div class="container">
+      <div class="container header-container">
         <nav class="navi">
           <a class="logo" href="./index.html"
             >Web<span class="logo-black">Studio</span>
@@ -51,16 +51,19 @@
             </li>
           </ul>
         </address>
+        <button class="burger-btn" type="button">
+          <svg class="icon-burger" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
       <!-- ============= HERO ============= -->
-      <section class="section-one">
+      <section class="hero">
         <div class="container">
-          <h1 class="titel-section-one">
-            Effective Solutions for Your Business
-          </h1>
+          <h1 class="titel-hero">Effective Solutions for Your Business</h1>
           <button class="button" type="button">Order Service</button>
         </div>
       </section>
@@ -127,14 +130,15 @@
           <ul class="team-list">
             <li class="team-member">
               <img
-                src="./images/mark_guerrero.jpg"
+                srcset="../images/mark_guerrero@2x.jpg 2x"
+                src="../images/mark_guerrero.jpg"
                 alt="Mark Guerrero avatar"
                 width="264"
                 height="260"
               />
               <div class="info-member">
-                <h3 class="item">Mark Guerrero</h3>
-                <p class="item-text">Product Designer</p>
+                <h3 class="member-item">Mark Guerrero</h3>
+                <p class="member-item-text">Product Designer</p>
                 <ul class="social-list">
                   <li class="social-link">
                     <a
@@ -178,14 +182,15 @@
             </li>
             <li class="team-member">
               <img
-                src="./images/tom_ford.jpg"
+                srcset="../images/tom_ford@2x.jpg 2x"
+                src="../images/tom_ford.jpg"
                 alt="Tom Ford avatar"
                 width="264"
                 height="260"
               />
               <div class="info-member">
-                <h3 class="item">Tom Ford</h3>
-                <p class="item-text">Frontend Developer</p>
+                <h3 class="member-item">Tom Ford</h3>
+                <p class="member-item-text">Frontend Developer</p>
                 <ul class="social-list">
                   <li class="social-link">
                     <a
@@ -229,14 +234,15 @@
             </li>
             <li class="team-member">
               <img
-                src="./images/camila_garcia.jpg"
+                srcset="../images/camila_garcia@2x.jpg 2x"
+                src="../images/camila_garcia.jpg"
                 alt="Camila Garcia avatar"
                 width="264"
                 height="260"
               />
               <div class="info-member">
-                <h3 class="item">Camila Garcia</h3>
-                <p class="item-text">Marketing</p>
+                <h3 class="member-item">Camila Garcia</h3>
+                <p class="member-item-text">Marketing</p>
                 <ul class="social-list">
                   <li class="social-link">
                     <a
@@ -280,14 +286,15 @@
             </li>
             <li class="team-member">
               <img
-                src="./images/daniel_wilson.jpg"
+                srcset="../images/daniel_wilson@2x.jpg 2x"
+                src="../images/daniel_wilson.jpg"
                 alt="Daniel Wilson avatar"
                 width="264"
                 height="260"
               />
               <div class="info-member">
-                <h3 class="item">Daniel Wilson</h3>
-                <p class="item-text">UI Designer</p>
+                <h3 class="member-item">Daniel Wilson</h3>
+                <p class="member-item-text">UI Designer</p>
                 <ul class="social-list">
                   <li class="social-link">
                     <a
@@ -333,7 +340,7 @@
         </div>
       </section>
       <!-- ============= PORTFOLIO ============= -->
-      <section class="section" id="portfolio">
+      <section class="section hidden" id="portfolio">
         <div class="container">
           <h2 class="section-title">Our Portfolio</h2>
           <ul class="portfolio-list">
@@ -456,7 +463,7 @@
       </section>
     </main>
     <!-- ============= FOOTER ============= -->
-    <footer class="page-footer">
+    <footer class="page-footer hidden">
       <div class="container foot">
         <div class="device-foot">
           <a class="logo foot" href="./index.html"
@@ -522,8 +529,75 @@
         </div>
       </div>
     </footer>
+    <!-- ============= MOBILE-MENU ============= -->
+    <div class="mobile-menu">
+      <div class="container mobile-menu-container">
+        <button class="mobile-menu-btn">
+          <svg class="mobile-menu-btn-icon" width="24" height="24">
+            <use href="./images/icons#icon-x.svg"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu-nav">
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-list-link" href="./index.html">Studio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-list-link" href="">Portfolio</a>
+            </li>
+            <li class="mobile-menu-list-item">
+              <a class="mobile-menu-list-link" href="">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+        <address class="mobile-contacts">
+          <ul class="mobile-contacts-list">
+            <li>
+              <a class="mobile-contacts-link" href="mailto:info@devstudio.com"
+                >info@devstudio.com</a
+              >
+            </li>
+            <li>
+              <a class="mobile-contacts-link" href="tel:+110001111111"
+                >+11 (000) 111-11-11</a
+              >
+            </li>
+          </ul>
+        </address>
+        <ul class="social-list">
+          <li class="mobile-social-link">
+            <a href="https://www.instagram.com/" target="_blank" class="link"
+              ><svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-link">
+            <a href="https://twitter.com/" target="_blank" class="link"
+              ><svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-link">
+            <a href="https://www.facebook.com/" target="_blank" class="link"
+              ><svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="mobile-social-link">
+            <a href="https://www.linkedin.com/" target="_blank" class="link"
+              ><svg class="icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
     <!-- ============= MODAL ============= -->
-    <div class="modal-overlay">
+    <div class="modal-overlay hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">
           <svg class="icon-close" width="8" height="8">
