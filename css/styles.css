@@ -930,6 +930,9 @@ modal
 .check-input:focus + .check-label .check-mark {
   outline: 2px solid rgba(0, 0, 0, 1);
 }
+.text-modal-privacy {
+  width: 100%;
+}
 a.link-privacy-policy {
   display: inline;
   font-size: 12px;
