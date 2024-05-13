@@ -275,7 +275,7 @@ mobile-menu
 .mobile-social-list {
   display: flex;
   gap: 40px;
-  justify-content: cspace-between;
+  justify-content: space-between;
 }
 .link {
   display: flex;
@@ -463,9 +463,9 @@ benefits
   }
   .icon-box {
     display: flex;
-    justify-content: center; /*вирівнювання по горизонталі*/
-    align-items: center; /*вирівнювання по вертикалі*/
-    width: 264pxpx;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
     height: 112px;
     border: 1px solid #8e8f99;
     border-radius: 4px;
