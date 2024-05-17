@@ -835,15 +835,6 @@ modal
   fill: #ffffff;
   background-color: #404bbf;
 }
-.modal-text {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #2e2f42;
-  margin-bottom: 16px;
-}
 .form-strip {
   margin-bottom: 8px;
 }
@@ -932,6 +923,7 @@ modal
   justify-content: center;
   fill: transparent;
   cursor: pointer;
+  flex-shrink: 0;
 }
 .check-input:checked + .check-label .check-mark {
   background-color: #404bbf;
@@ -942,7 +934,7 @@ modal
   outline: 2px solid rgba(0, 0, 0, 1);
 }
 .text-modal-privacy {
-  width: 100%;
+  /* width: 100%; */
 }
 a.link-privacy-policy {
   display: inline;
