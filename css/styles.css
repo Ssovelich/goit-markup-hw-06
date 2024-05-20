@@ -467,6 +467,9 @@ benefits
   .item-benefits {
     width: 356px;
   }
+  .item {
+    text-align: start;
+  }
 }
 @media screen and (min-width: 1158px) {
   .section {
